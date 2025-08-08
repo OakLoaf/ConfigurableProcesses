@@ -10,7 +10,9 @@ jobs:
       pull-requests: write
     steps:
       - name: Checkout Repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: false
 
       - name: Apply Rename
         uses: kota65535/github-template-rename-action@v1
